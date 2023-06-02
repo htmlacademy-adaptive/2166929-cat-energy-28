@@ -1,0 +1,14 @@
+.button-pointer {
+  display: inline-flex;
+  padding: 4px 0;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  font-family: $font-oswald;
+  color: $black;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  cursor: pointer;
+}

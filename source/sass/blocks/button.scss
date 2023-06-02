@@ -1,0 +1,22 @@
+.button {
+  display: inline-flex;
+  padding: 10px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: $font-oswald;
+  color: $white;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: $starbur;
+  border: none;
+  cursor: pointer;
+
+  &--background-color {
+    color: $goshawk-grey;
+
+    background-color: $bleached-silk;
+  }
+}

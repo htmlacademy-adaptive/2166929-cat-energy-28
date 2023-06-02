@@ -1,0 +1,19 @@
+.header__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.header__link {
+  display: inline-flex;
+  padding: 22px 22px 24px 22px;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  font-family: $font-oswald;
+  color: $black;
+  text-transform: uppercase;
+  text-decoration: none;
+}

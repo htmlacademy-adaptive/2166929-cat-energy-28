@@ -1,0 +1,22 @@
+.form-input__description,
+.form-input__input {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: $font-oswald;
+  color: $goshawk-grey;
+  text-transform: uppercase;
+}
+
+.form-input__input {
+  padding: 14px 20px 13px 20px;
+
+  border: none;
+  outline: 1px solid $moon-lily;
+
+  &--textarea {
+    height: 150px;
+
+    resize: none;
+  }
+}

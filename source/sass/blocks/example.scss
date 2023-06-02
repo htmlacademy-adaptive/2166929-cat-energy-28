@@ -1,0 +1,46 @@
+.example {
+  background-color: $vapor;
+}
+
+.example__title {
+  margin: 0 0 40px 0;
+}
+
+.example__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.example__important-number {
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  font-family: $font-oswald;
+  color: $black;
+  text-transform: uppercase;
+}
+
+.example__important-description {
+  margin: 0;
+
+  font-size: 12px;
+  line-height: 12px;
+  font-family: $font-lato;
+  color: $goshawk-grey;
+}
+
+.example__final-description,
+.example__final-price {
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: $font-oswald;
+  color: $black;
+  text-transform: uppercase;
+}

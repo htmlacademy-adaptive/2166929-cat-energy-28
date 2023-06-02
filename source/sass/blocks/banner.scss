@@ -1,0 +1,38 @@
+.banner {
+  position: relative;
+
+  padding: 186px 61px 43px 58px;
+
+  background-color: $starbur;
+  background-image: url("../img/background/banner-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: $starbur;
+    opacity: 85%;
+  }
+}
+
+.banner__content-container {
+  position: relative;
+  z-index: 2;
+}
+
+.banner__description {
+  margin: 0;
+
+  font-size: 16px;
+  line-height: 20px;
+  font-family: $font-lato;
+  color: $white;
+}

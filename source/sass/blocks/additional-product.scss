@@ -1,0 +1,20 @@
+.additional-product__title {
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  font-family: $font-oswald;
+  color: $black-out;
+  text-transform: uppercase;
+}
+
+.additional-product__description,
+.additional-product__price {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 14px;
+  font-family: $font-lato;
+  color: $goshawk-grey;
+}

@@ -1,0 +1,25 @@
+.map {
+  &--background {
+    background-color: $bleached-silk;
+  }
+}
+
+.map__title {
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: $font-oswald;
+  color: $dreamless-sleep;
+  text-transform: uppercase;
+}
+
+.map__description {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 20px;
+  font-family: $font-lato;
+  color: $goshawk-grey;
+}

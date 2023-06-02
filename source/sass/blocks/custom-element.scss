@@ -1,0 +1,42 @@
+.custom-element {
+  position: relative;
+
+  display: flex;
+}
+
+.custom-element__icon {
+  position: absolute;
+
+  width: 30px;
+  height: 30px;
+
+  outline: 1px solid $compact-disc-grey;
+
+  &--radio {
+    border-radius: 50%;
+  }
+}
+
+.custom-element__input[type="radio"]:checked + .custom-element__icon::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 9px;
+
+  width: 13px;
+  height: 13px;
+
+  background-color: $starbur;
+  border-radius: 50%;
+}
+
+.custom-element__input-label {
+  padding: 5px 0 5px 45px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: $font-oswald;
+  color: $black-out;
+  text-transform: uppercase;
+}

@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Узнайте больше о правильном питании для котов.">
-  <title>Функциональное питание для котов</title>
+  <meta name="description" content="Заполните анкету, и мы подберем программу питания для вашего кота.">
+  <title>Подбор программы питания для кота</title>
   <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" as="font" crossorigin="anonymous">
@@ -26,111 +26,127 @@
       <span class="header__toggle-line"></span>
     </button>
     <nav class="header__navigation">
-      <span class="header__logo header__logo--main">
+      <a class="header__logo" href="index.html">
+        <span class="visually-hidden">Переход на главную страницу.</span>
         <img src="" width="185" height="96" alt="Логотип «Cat Energy».">
-      </span>
+      </a>
       <ul class="header__list">
         <li class="header__item">
-          <span class="header__link header__link--current">Главная</span>
+          <a class="header__link" href="index.html">Главная</a>
         </li>
         <li class="header__item">
           <a class="header__link" href="catalog.html">Каталог продукции</a>
         </li>
         <li class="header__item">
-          <a class="header__link" href="form.html">Подбор программы</a>
+          <span class="header__link header__link--current">Подбор программы</span>
         </li>
       </ul>
     </nav>
   </header>
 
   <main class="main-container">
-    <section class="intro">
+    <section class="form">
       <div class="container">
-        <div class="intro__content-container">
-          <h1 class="intro__title page-title">Функциональное питание для котов</h1>
-          <p class="intro__subtitle">Занялся собой? Займись котом!</p>
-          <a class="intro__button button" href="form.html">Подобрать программу</a>
-          <img class="intro__image" src="img/content/intro-product-mobile.png" width="280" height="270" alt="Фотография корма «Cat Energy» со вкусом курицы.">
+        <div class="form__info">
+          <h1 class="form__title page-title">Подбор программы</h1>
+          <p class="form__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
         </div>
-      </div>
-    </section>
-
-    <section class="advantages">
-      <div class="container">
-        <h2 class="visually-hidden">Наши преимущества.</h2>
-        <ul class="advantages__list">
-          <li class="advantages__item advantages__item--weight-loss">
-            <h3 class="advantages__title">Похудение</h3>
-            <p class="advantages__description description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-            <a class="advantages__button button-pointer" href="#">Каталог slim</a>
-          </li>
-          <li class="advantages__item advantages__item--weight-gain">
-            <h3 class="advantages__title">Набор массы</h3>
-            <p class="advantages__description description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-            <a class="advantages__button button-pointer" href="#">Каталог pro</a>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="instruction">
-      <div class="container">
-        <h2 class="instruction__title block-title">Как это работает</h2>
-        <ul class="instruction__list">
-          <li class="instruction__item instruction__item--leaf">
-            <p class="instruction__description description">Функциональное питание содержит только полезные питательные вещества.</p>
-          </li>
-          <li class="instruction__item instruction__item--water">
-            <p class="instruction__description description">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
-          </li>
-          <li class="instruction__item instruction__item--fork-knife">
-            <p class="instruction__description description">Замените один-два приема обычной еды на наше функциональное питание.</p>
-          </li>
-          <li class="instruction__item instruction__item--watch">
-            <p class="instruction__description description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="example">
-      <div class="container">
-        <div class="example__content-container">
-          <h2 class="example__title block-title">Живой пример</h2>
-          <p class="example__description description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-          <ul class="example__list">
-            <li class="example__item">
-              <span class="example__important-number">5 кг</span>
-              <p class="example__important-description">снижение веса</p>
-            </li>
-            <li class="example__item">
-              <span class="example__important-number">60 дней</span>
-              <p class="example__important-description">затрачено времени</p>
-            </li>
-          </ul>
-          <div class="example__price">
-            <p class="example__final-description">Затраты на питание:</p>
-            <p class="example__final-price">15 000 руб.</p>
+        <form class="form__fields fields" action="https://echo.htmlacademy.ru/" method="post">
+          <div class="fields__container">
+            <fieldset class="fields__fieldset">
+              <legend class="fields__title">
+                <span class="visually-hidden">Информация о коте.</span>
+              </legend>
+              <label class="fields__label form-input">
+                <span class="form-input__description">Имя:*</span>
+                <input class="form-input__input" type="text" name="name" placeholder="Имя" value="Барсик" required>
+              </label>
+              <label class="fields__label form-input">
+                <span class="form-input__description">Вес (кг):*</span>
+                <input class="form-input__input" type="number" name="weight" placeholder="Вес" value="7" required>
+              </label>
+              <label class="fields__label form-input">
+                <span class="form-input__description">Возраст (лет):</span>
+                <input class="form-input__input" type="number" name="age" placeholder="Возраст" value="7" required>
+              </label>
+            </fieldset>
+            <fieldset class="fields__fieldset">
+              <legend class="fields__title">
+                <span class="visually-hidden">Какая программа нужна вашему коту?</span>
+              </legend>
+              <label class="fields__element custom-element">
+                <input class="custom-element__input visually-hidden" type="radio" name="program" value="weight-loss" checked>
+                <span class="custom-element__icon custom-element__icon--radio"></span>
+                <span class="custom-element__input-label">Похудение</span>
+              </label>
+              <label class="fields__element custom-element">
+                <input class="custom-element__input visually-hidden" type="radio" name="program" value="weight-gain">
+                <span class="custom-element__icon custom-element__icon--radio"></span>
+                <span class="custom-element__input-label">Набор массы</span>
+              </label>
+              <label class="fields__element custom-element">
+                <input class="custom-element__input visually-hidden" type="radio" name="program" value="need-advice">
+                <span class="custom-element__icon custom-element__icon--radio"></span>
+                <span class="custom-element__input-label">Не знаю (Нужен ваш совет)</span>
+              </label>
+            </fieldset>
+            <fieldset class="fields__fieldset">
+              <legend class="fields__title">Контактные данные (владельца кота)</legend>
+              <label class="fields__label form-input">
+                <span class="form-input__description">E-mail:*</span>
+                <input class="form-input__input form-input__input--email" type="email" name="email" placeholder="E-mail" value="kuklachev@gmail.com" required>
+              </label>
+              <label class="fields__label form-input">
+                <span class="form-input__description">Телефон:*</span>
+                <input class="form-input__input form-input__input--telephone" type="tel" name="telephone" placeholder="Телефон" value="8 (960) 900-60-90" required>
+              </label>
+            </fieldset>
+            <fieldset class="fields__fieldset">
+              <legend class="fields__title">Комментарий</legend>
+              <label class="fields__label form-input">
+                <span class="visually-hidden">Оставьте развернутый ответ обо всех повадках кота.</span>
+                <textarea class="form-input__input form-input__input--textarea" name="message" placeholder="Расскажите обо всех повадках кота"></textarea>
+              </label>
+            </fieldset>
+            <fieldset class="fields__fieldset">
+              <legend class="fields__title">Дополнительно</legend>
+              <label class="fields__element custom-element">
+                <input class="custom-element__input visually-hidden" type="checkbox" name="ingredients" value="sweetener" checked>
+                <span class="custom-element__icon"></span>
+                <span class="custom-element__input-label">Сахарозаменитель</span>
+              </label>
+              <label class="fields__element custom-element">
+                <input class="custom-element__input visually-hidden" type="checkbox" name="ingredients" value="water">
+                <span class="custom-element__icon"></span>
+                <span class="custom-element__input-label">Питьевая вода</span>
+              </label>
+              <label class="fields__element custom-element">
+                <input class="custom-element__input visually-hidden" type="checkbox" name="ingredients" value="milk">
+                <span class="custom-element__icon"></span>
+                <span class="custom-element__input-label">Молоко</span>
+              </label>
+              <label class="fields__element custom-element">
+                <input class="custom-element__input visually-hidden" type="checkbox" name="ingredients" value="vitamins">
+                <span class="custom-element__icon"></span>
+                <span class="custom-element__input-label">Витамины</span>
+              </label>
+            </fieldset>
           </div>
-        </div>
-        <div class="example__image-container">
-          <button class="visually-hidden" type="button">Подвинуть влево/вправо для просмотра до и после.</button>
-          <div class="example__image-before-container">
-            <img class="example__image-before" src="img/content/example-before-mobile.png" width="280" height="256" alt="Фотография кота до приема корма.">
+          <div class="fields__button-container">
+            <button class="fields__button button" type="submit">Отправить заявку</button>
+            <p class="fields__description">* — Обязательные поля</p>
           </div>
-          <div class="example__image-after-container">
-            <img class="example__image-after" src="img/content/example-after-mobile.png" width="280" height="256" alt="Фотография кота после приема корма.">
-          </div>
-        </div>
+        </form>
       </div>
+
     </section>
 
-    <section class="map">
+    <section class="map map--background-color">
       <div class="container">
         <h2 class="visually-hidden">Контакты.</h2>
         <div class="map__content-container">
           <span class="map__title">Приглашаем к сотрудничеству дилеров!</span>
-          <p class="map__description">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          <p class="map__description description">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
         <img class="map__map" src="img/content/map-mobile.jpg" width="320" height="362" alt="Карта местоположения магазина «Cat Energy».">
       </div>
@@ -139,7 +155,8 @@
 
   <footer class="footer">
     <div class="container">
-      <span class="footer__logo footer__logo--main">
+      <a class="footer__logo" href="index.html">
+        <span class="visually-hidden">Переход на главную страницу.</span>
         <svg width="129" height="25" viewBox="0 0 129 25" fill="#111111" xmlns="http://www.w3.org/2000/svg">
           <path d="M1.62387 22.0513C0.48969 20.3682 -0.0733255 18.3503 0.0213619 16.3077V7.79487C-0.115985 5.73031 0.411776 3.67661 1.52371 1.94872C2.62543 0.615385 4.32809 0 6.832 0C9.33592 0 10.9384 0.615385 11.94 1.74359C13.0274 3.17255 13.5622 4.96181 13.4423 6.76923V8.82051H8.53466V6.46154C8.5743 5.76385 8.47198 5.06533 8.23419 4.41026C8.10709 4.14583 7.90565 3.9264 7.65576 3.78018C7.40588 3.63395 7.11899 3.56763 6.832 3.58974C6.13091 3.58974 5.63013 3.79487 5.42981 4.30769C5.20324 5.03643 5.10158 5.79984 5.12934 6.5641V17.5385C5.07645 18.2799 5.2146 19.0227 5.52997 19.6923C5.73028 20.2051 6.23106 20.4103 6.93216 20.4103C7.63326 20.4103 8.03388 20.2051 8.23419 19.6923C8.46191 18.9992 8.56375 18.2692 8.53466 17.5385V15.0769H13.4423V17.1282C13.5442 18.9651 13.0124 20.7803 11.94 22.2564C10.9384 23.4872 9.23576 24.1026 6.832 24.1026C4.42825 24 2.62543 23.3846 1.62387 22.0513Z"/>
           <path d="M19.3515 0.307617H25.0604L29.267 23.6922H24.6598L23.8586 18.7692H20.5534L19.7522 23.6922H15.0448L19.3515 0.307617ZM23.4579 15.6922L22.2561 6.56403L21.0542 15.6922H23.4579Z"/>
@@ -151,7 +168,7 @@
           <path d="M102.882 21.9487C101.841 20.1554 101.352 18.0821 101.48 15.9999V8.20507C101.455 6.71875 101.624 5.23567 101.981 3.79481C102.316 2.71811 102.984 1.78218 103.884 1.12815C105.002 0.450275 106.292 0.128917 107.589 0.20507C109.693 0.20507 111.195 0.71789 112.096 1.8461C113.133 3.33582 113.629 5.14977 113.499 6.9743V7.79481H110.494V7.07687C110.498 6.21789 110.431 5.36008 110.294 4.51276C110.209 3.97732 109.921 3.49792 109.492 3.17943C108.929 2.80104 108.261 2.62099 107.589 2.66661C106.871 2.61949 106.16 2.83785 105.586 3.28199C105.351 3.48529 105.158 3.73569 105.02 4.01787C104.883 4.30004 104.802 4.60805 104.785 4.92302C104.653 5.83993 104.586 6.76543 104.585 7.69225V16.4102C104.511 17.7384 104.716 19.0674 105.186 20.3076C105.586 21.1281 106.388 21.4358 107.589 21.4358C108.064 21.4964 108.545 21.4119 108.973 21.1929C109.401 20.9739 109.756 20.6302 109.993 20.2051C110.522 18.9081 110.762 17.5064 110.694 16.1025V14.4615H107.79V12.1025H113.599V23.6923H111.596L111.295 21.0256C111.033 21.9193 110.486 22.6975 109.742 23.2364C108.998 23.7753 108.099 24.0441 107.189 23.9999C106.361 24.0498 105.534 23.8885 104.783 23.5304C104.031 23.1724 103.378 22.6289 102.882 21.9487V21.9487Z"/>
           <path d="M120.009 15.4871L115.101 0.410156H118.106L121.611 11.6922L125.017 0.410156H128.021L123.114 15.4871V23.6922H120.109V15.4871H120.009Z"/>
         </svg>
-      </span>
+      </a>
       <ul class="footer__social social">
         <li class="social-item">
           <a class="social-link" href="https://vk.com/htmlacademy" target="_blank">
@@ -180,5 +197,3 @@
   </footer>
   <script src="js/menu.js"></script>
 </body>
-
-</html>
