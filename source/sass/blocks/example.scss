@@ -1,36 +1,96 @@
 .example {
+  padding: 25px 0 40px 0;
+
   background-color: $vapor;
+
+  @media (min-width: $vp-768) {
+    padding: 45px 0 101px 0;
+
+    background: linear-gradient($white 621px, $vapor 621px);
+  }
+
+  @media (min-width: $vp-1260) {
+    padding: 34px 0 75px 0;
+
+    background: linear-gradient($white 170px, $bleached-silk 170px);
+  }
+}
+
+.example__container {
+  @media (min-width: $vp-1260) {
+    display: flex;
+  }
 }
 
 .example__title {
   margin: 0 0 40px 0;
 }
 
+.example__result-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .example__list {
-  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 0 20px 0;
   padding: 0;
 
   list-style: none;
 }
 
+.example__item {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 124px;
+  max-width: 130px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: calc(100% - 5px);
+
+    border-radius: 3px;
+    outline: 1px solid $compact-disc-grey;
+  }
+}
+
 .example__important-number {
   margin: 0;
+  padding: 14px 14px 7px 14px;
 
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
   font-family: $font-oswald;
+  text-align: center;
   color: $black;
   text-transform: uppercase;
 }
 
 .example__important-description {
+  z-index: 2;
+
   margin: 0;
 
   font-size: 12px;
   line-height: 12px;
   font-family: $font-lato;
+  text-align: center;
   color: $goshawk-grey;
+
+  background-color: $vapor;
 }
 
 .example__final-description,
@@ -43,4 +103,43 @@
   font-family: $font-oswald;
   color: $black;
   text-transform: uppercase;
+}
+
+.example__price {
+  display: flex;
+
+  gap: 3px;
+}
+
+.example__image-before-after {
+  display: flex;
+  width: 280px;
+  height: 256px;
+  margin: 0 auto;
+
+  @media (min-width: $vp-768) {
+    width: 560px;
+    height: 512px;
+  }
+}
+
+.example__image-after-container,
+.example__image-before-container {
+  width: 50%;
+  overflow: hidden;
+}
+
+.example__image-after,
+.example__image-before {
+  min-width: 280px;
+  height: 256px;
+
+  @media (min-width: $vp-768) {
+    min-width: 560px;
+    height: 512px;
+  }
+}
+
+.example__image-after {
+  transform: translate(-50%, 0);
 }

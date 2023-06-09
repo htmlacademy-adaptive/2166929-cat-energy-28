@@ -1,3 +1,10 @@
+.form-input {
+  display: flex;
+  width: 100%;
+
+  gap: 12px;
+}
+
 .form-input__description,
 .form-input__input {
   font-weight: 400;
@@ -18,5 +25,10 @@
     height: 150px;
 
     resize: none;
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
   }
 }

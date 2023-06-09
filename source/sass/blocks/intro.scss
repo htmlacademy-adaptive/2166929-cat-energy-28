@@ -1,35 +1,108 @@
 .intro {
   position: relative;
 
-  background-image: url("../img/background/intro-background-mobile.jpg");
-  background-repeat: no-repeat;
+  padding: 0 0 10px 0;
 
-  &::before {
+  &::before,
+  &::after {
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     z-index: 1;
 
+    display: block;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 178px);
 
-    background: linear-gradient($starbur 302px, $white 302px);
+    @media (min-width: $vp-768) {
+      display: none;
+    }
+
+    @media (min-width: $vp-1260) {
+      top: -60px;
+
+      display: block;
+      width: 50%;
+      height: calc(100% + 60px);
+    }
+  }
+
+  &::before {
+    background-image: url("../img/background/intro-background-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &::after {
+    background-color: $starbur;
     opacity: 85%;
+  }
+
+  @media (min-width: $vp-768) {
+    padding: 0;
   }
 }
 
-.intro__content-container {
+.intro__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  @media (min-width: $vp-768) {
+    padding: 64px 118px 544px 118px;
+  }
+
+  @media (min-width: $vp-1260) {
+    width: calc(100% + 60px);
+    padding: 111px 820px 185px 100px;
+  }
+}
+
+.intro__image {
   position: relative;
   z-index: 2;
 
-  padding: 27px 0 0 0;
+  @media (min-width: $vp-768) {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+    transform: translate(-50%, 0);
+  }
+
+  @media (min-width: $vp-1260) {
+    position: absolute;
+    top: 90px;
+    left: 50%;
+
+    transform: translate(-50%, 0);
+  }
+}
+
+.intro__title,
+.intro__subtitle {
+  position: relative;
+  z-index: 2;
+
+  text-align: center;
+  color: $white;
+
+  @media (min-width: $vp-768) {
+    align-self: flex-start;
+
+    text-align: start;
+    color: $black;
+  }
 }
 
 .intro__title {
   margin: 0 0 25px 0;
 
-  color: $white;
+  @media (min-width: $vp-768) {
+    margin: 0 0 40px 0;
+  }
 }
 
 .intro__subtitle {
@@ -39,6 +112,28 @@
   font-size: 14px;
   line-height: 14px;
   font-family: $font-oswald;
-  color: $white;
   text-transform: uppercase;
+
+  @media (min-width: $vp-768) {
+    margin: 0 0 49px 0;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $vp-1260) {
+    margin: 0 0 52px 0;
+  }
+}
+
+.intro__button {
+  width: 100%;
+
+  @media (min-width: $vp-768) {
+    position: relative;
+    z-index: 2;
+
+    align-self: flex-start;
+    width: auto;
+  }
 }

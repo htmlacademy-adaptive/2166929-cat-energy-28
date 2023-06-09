@@ -1,18 +1,149 @@
+.instruction {
+  padding: 10px 0 49px 0;
+
+  @media (min-width: $vp-768) {
+    padding: 22px 0 45px 0;
+  }
+
+  @media (min-width: $vp-1260) {
+    padding: 35px 0 34px 0;
+  }
+}
+
 .instruction__title {
   margin: 0 0 40px 0;
 }
 
 .instruction__list {
+  display: grid;
   margin: 0;
   padding: 0;
 
   list-style: none;
+
+  gap: 20px;
+
+  @media (min-width: $vp-768) {
+    gap: 37px 59px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: $vp-1260) {
+    gap: 40px 80px;
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .instruction__item {
+  position: relative;
+
   min-height: 60px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    width: 60px;
+    height: 60px;
+
+    background-color: $starbur;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-width: $vp-768) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &::before {
+    display: none;
+
+    @media (min-width: $vp-768) {
+      position: absolute;
+      top: -15px;
+      right: 0;
+      z-index: -1;
+
+      display: block;
+      height: 280px;
+
+      font-weight: 400;
+      font-size: 280px;
+      line-height: 280px;
+      font-family: $font-oswald;
+      color: $bleached-silk;
+    }
+  }
+
+  &--leaf {
+    &::after {
+      background-image: url("../img/background/instruction-leaf-icon.svg");
+    }
+
+    &::before {
+      @media (min-width: $vp-768) {
+        content: "1";
+
+        width: 112px;
+      }
+    }
+  }
+
+  &--water {
+    &::after {
+      background-image: url("../../img/background/instruction-water-icon.svg");
+    }
+
+    &::before {
+      @media (min-width: $vp-768) {
+        content: "2";
+
+        width: 134px;
+      }
+    }
+  }
+
+  &--fork-knife {
+    &::after {
+      background-image: url("../../img/background/instruction-fork-knife-icon.svg");
+    }
+
+    &::before {
+      @media (min-width: $vp-768) {
+        content: "3";
+
+        width: 134px;
+      }
+    }
+  }
+
+  &--watch {
+    &::after {
+      background-image: url("../../img/background/instruction-watch-icon.svg");
+    }
+
+    &::before {
+      @media (min-width: $vp-768) {
+        content: "4";
+
+        width: 136px;
+      }
+    }
+  }
+
+  @media (min-width: $vp-768) {
+    padding: 151px 0 57px 0;
+  }
 }
 
 .instruction__description {
   padding: 0 0 0 80px;
+
+  @media (min-width: $vp-768) {
+    padding: 0;
+  }
 }

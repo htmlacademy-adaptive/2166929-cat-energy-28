@@ -7,4 +7,9 @@
   line-height: 40px;
   font-family: $font-oswald;
   color: $black;
+
+  @media (min-width: $vp-768) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }

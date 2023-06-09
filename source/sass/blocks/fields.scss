@@ -1,6 +1,47 @@
+.fields__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.fields__fieldset {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &--information,
+  &--program {
+    margin: 0;
+    padding: 0;
+
+    border: none;
+
+    @media (min-width: $vp-1260) {
+      width: calc(50% - 40px);
+    }
+  }
+
+  &--contacts {
+    @media (min-width: $vp-1260) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+}
+
 .fields__title {
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
   font-family: $font-oswald;
+}
+
+.fields__label {
+  &--email,
+  &--ltel {
+    @media (min-width: $vp-1260) {
+      width: calc(50% - 40px);
+    }
+  }
 }

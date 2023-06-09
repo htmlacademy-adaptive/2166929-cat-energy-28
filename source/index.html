@@ -19,39 +19,49 @@
 
 <body class="page__body">
   <header class="header no-js">
-    <button class="header__toggle" type="button">
-      <span class="visually-hidden">Открыть/закрыть меню.</span>
-      <span class="header__toggle-line"></span>
-      <span class="header__toggle-line"></span>
-      <span class="header__toggle-line"></span>
-    </button>
-    <nav class="header__navigation">
-      <span class="header__logo header__logo--main">
-        <img src="" width="185" height="96" alt="Логотип «Cat Energy».">
-      </span>
-      <ul class="header__list">
-        <li class="header__item">
-          <span class="header__link header__link--current">Главная</span>
-        </li>
-        <li class="header__item">
-          <a class="header__link" href="catalog.html">Каталог продукции</a>
-        </li>
-        <li class="header__item">
-          <a class="header__link" href="form.html">Подбор программы</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="header__container container">
+      <div class="header__button-logo-container">
+        <span class="header__logo header__logo--main">
+          <picture>
+            <source media="(min-width: 1260px)" width="202" height="59" srcset="img/content/logo-desktop.svg">
+            <source media="(min-width: 768px)" width="174" height="51" srcset="img/content/logo-tablet.svg">
+            <img src="img/content/logo-mobile.svg" width="190" height="37" alt="Логотип «Cat Energy».">
+          </picture>
+        </span>
+        <button class="header__toggle" type="button">
+          <span class="visually-hidden">Открыть/закрыть меню.</span>
+          <span class="header__toggle-line"></span>
+          <span class="header__toggle-line"></span>
+          <span class="header__toggle-line"></span>
+        </button>
+      </div>
+      <nav class="header__navigation">
+        <ul class="header__list">
+          <li class="header__item">
+            <span class="header__link header__link--main header__link--current-main">Главная</span>
+          </li>
+          <li class="header__item">
+            <a class="header__link header__link--main" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link header__link--main" href="form.html">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main class="main-container">
     <section class="intro">
-      <div class="container">
-        <div class="intro__content-container">
-          <h1 class="intro__title page-title">Функциональное питание для котов</h1>
+      <div class="intro__container container">
+        <h1 class="intro__title page-title">Функциональное<br>питание для котов</h1>
           <p class="intro__subtitle">Занялся собой? Займись котом!</p>
+          <picture>
+            <source media="(min-width: 1260px)" width="552" height="499" srcset="img/content/intro-product-desktop.png 1x, img/content/intro-product-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" width="709" height="609" srcset="img/content/intro-product-tablet.png 1x, img/content/intro-product-tablet@2x.png 2x">
+            <img class="intro__image" src="img/content/intro-product-mobile.png" width="280" height="270" srcset="img/content/intro-product-mobile@2x.png 2x" alt="Фотография корма «Cat Energy» со вкусом курицы.">
+          </picture>
           <a class="intro__button button" href="form.html">Подобрать программу</a>
-          <img class="intro__image" src="img/content/intro-product-mobile.png" width="280" height="270" alt="Фотография корма «Cat Energy» со вкусом курицы.">
-        </div>
       </div>
     </section>
 
@@ -94,32 +104,43 @@
     </section>
 
     <section class="example">
-      <div class="container">
+      <div class="example__container container">
         <div class="example__content-container">
           <h2 class="example__title block-title">Живой пример</h2>
           <p class="example__description description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-          <ul class="example__list">
-            <li class="example__item">
-              <span class="example__important-number">5 кг</span>
-              <p class="example__important-description">снижение веса</p>
-            </li>
-            <li class="example__item">
-              <span class="example__important-number">60 дней</span>
-              <p class="example__important-description">затрачено времени</p>
-            </li>
-          </ul>
-          <div class="example__price">
-            <p class="example__final-description">Затраты на питание:</p>
-            <p class="example__final-price">15 000 руб.</p>
+          <div class="example__result-container">
+            <ul class="example__list">
+              <li class="example__item">
+                <span class="example__important-number">5 кг</span>
+                <p class="example__important-description">снижение веса</p>
+              </li>
+              <li class="example__item">
+                <span class="example__important-number">60 дней</span>
+                <p class="example__important-description">затрачено времени</p>
+              </li>
+            </ul>
+            <div class="example__price">
+              <p class="example__final-description">Затраты на питание:</p>
+              <p class="example__final-price">15 000 руб.</p>
+            </div>
           </div>
         </div>
         <div class="example__image-container">
           <button class="visually-hidden" type="button">Подвинуть влево/вправо для просмотра до и после.</button>
-          <div class="example__image-before-container">
-            <img class="example__image-before" src="img/content/example-before-mobile.png" width="280" height="256" alt="Фотография кота до приема корма.">
-          </div>
-          <div class="example__image-after-container">
-            <img class="example__image-after" src="img/content/example-after-mobile.png" width="280" height="256" alt="Фотография кота после приема корма.">
+          <div class="example__image-before-after">
+            <div class="example__image-before-container">
+              <picture>
+                <source media="(min-width: 768px)" width="560" height="512" srcset="img/content/example-before-tablet.png 1x, img/content/example-before-tablet@2x.png 2x">
+                <img class="example__image-before" src="img/content/example-before-mobile.png" width="280" height="256" srcset="img/content/example-before-mobile@2x.png 2x" alt="Фотография кота до приема корма.">
+              </picture>
+            </div>
+            <div class="example__image-after-container">
+              <picture>
+                <source media="(min-width: 768px)" width="560" height="512" srcset="img/content/example-after-tablet.png 1x, img/content/example-after-tablet@2x.png 2x">
+                <img class="example__image-after" src="img/content/example-after-mobile.png" width="280" height="256" srcset="img/content/example-after-mobile@2x.png 2x" alt="Фотография кота после приема корма.">
+              </picture>
+
+            </div>
           </div>
         </div>
       </div>
@@ -128,18 +149,27 @@
     <section class="map">
       <div class="container">
         <h2 class="visually-hidden">Контакты.</h2>
-        <div class="map__content-container">
-          <span class="map__title">Приглашаем к сотрудничеству дилеров!</span>
-          <p class="map__description">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-        </div>
-        <img class="map__map" src="img/content/map-mobile.jpg" width="320" height="362" alt="Карта местоположения магазина «Cat Energy».">
+          <div class="map__content-container">
+            <span class="map__title">Приглашаем к&nbsp;гсотрудничеству дилеров!</span>
+            <address class="map__address">
+              <p class="map__address-description">ул. Большая Конюшенная, д. 19/8</p>
+              <p class="map__address-city">Санкт-Петербург</p>
+            </address>
+          </div>
+      </div>
+      <div class="map__container">
+        <picture>
+          <source media="(min-width: 1260px)" width="1440" height="400" srcset="img/content/map-desktop.jpg 1x, img/content/map-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" width="768" height="400" srcset="img/content/map-tablet.jpg 1x, img/content/map-tablet@2x.jpg 2x">
+          <img class="map__img" src="img/content/map-mobile.jpg" width="320" height="362" srcset="img/content/map-mobile@2x.jpg 2x" alt="Карта местоположения магазина «Cat Energy».">
+        </picture>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container">
-      <span class="footer__logo footer__logo--main">
+    <div class="footer__container container">
+      <a class="footer__logo" href="index.html">
         <svg width="129" height="25" viewBox="0 0 129 25" fill="#111111" xmlns="http://www.w3.org/2000/svg">
           <path d="M1.62387 22.0513C0.48969 20.3682 -0.0733255 18.3503 0.0213619 16.3077V7.79487C-0.115985 5.73031 0.411776 3.67661 1.52371 1.94872C2.62543 0.615385 4.32809 0 6.832 0C9.33592 0 10.9384 0.615385 11.94 1.74359C13.0274 3.17255 13.5622 4.96181 13.4423 6.76923V8.82051H8.53466V6.46154C8.5743 5.76385 8.47198 5.06533 8.23419 4.41026C8.10709 4.14583 7.90565 3.9264 7.65576 3.78018C7.40588 3.63395 7.11899 3.56763 6.832 3.58974C6.13091 3.58974 5.63013 3.79487 5.42981 4.30769C5.20324 5.03643 5.10158 5.79984 5.12934 6.5641V17.5385C5.07645 18.2799 5.2146 19.0227 5.52997 19.6923C5.73028 20.2051 6.23106 20.4103 6.93216 20.4103C7.63326 20.4103 8.03388 20.2051 8.23419 19.6923C8.46191 18.9992 8.56375 18.2692 8.53466 17.5385V15.0769H13.4423V17.1282C13.5442 18.9651 13.0124 20.7803 11.94 22.2564C10.9384 23.4872 9.23576 24.1026 6.832 24.1026C4.42825 24 2.62543 23.3846 1.62387 22.0513Z"/>
           <path d="M19.3515 0.307617H25.0604L29.267 23.6922H24.6598L23.8586 18.7692H20.5534L19.7522 23.6922H15.0448L19.3515 0.307617ZM23.4579 15.6922L22.2561 6.56403L21.0542 15.6922H23.4579Z"/>
@@ -151,20 +181,20 @@
           <path d="M102.882 21.9487C101.841 20.1554 101.352 18.0821 101.48 15.9999V8.20507C101.455 6.71875 101.624 5.23567 101.981 3.79481C102.316 2.71811 102.984 1.78218 103.884 1.12815C105.002 0.450275 106.292 0.128917 107.589 0.20507C109.693 0.20507 111.195 0.71789 112.096 1.8461C113.133 3.33582 113.629 5.14977 113.499 6.9743V7.79481H110.494V7.07687C110.498 6.21789 110.431 5.36008 110.294 4.51276C110.209 3.97732 109.921 3.49792 109.492 3.17943C108.929 2.80104 108.261 2.62099 107.589 2.66661C106.871 2.61949 106.16 2.83785 105.586 3.28199C105.351 3.48529 105.158 3.73569 105.02 4.01787C104.883 4.30004 104.802 4.60805 104.785 4.92302C104.653 5.83993 104.586 6.76543 104.585 7.69225V16.4102C104.511 17.7384 104.716 19.0674 105.186 20.3076C105.586 21.1281 106.388 21.4358 107.589 21.4358C108.064 21.4964 108.545 21.4119 108.973 21.1929C109.401 20.9739 109.756 20.6302 109.993 20.2051C110.522 18.9081 110.762 17.5064 110.694 16.1025V14.4615H107.79V12.1025H113.599V23.6923H111.596L111.295 21.0256C111.033 21.9193 110.486 22.6975 109.742 23.2364C108.998 23.7753 108.099 24.0441 107.189 23.9999C106.361 24.0498 105.534 23.8885 104.783 23.5304C104.031 23.1724 103.378 22.6289 102.882 21.9487V21.9487Z"/>
           <path d="M120.009 15.4871L115.101 0.410156H118.106L121.611 11.6922L125.017 0.410156H128.021L123.114 15.4871V23.6922H120.109V15.4871H120.009Z"/>
         </svg>
-      </span>
+      </a>
       <ul class="footer__social social">
         <li class="social-item">
-          <a class="social-link" href="https://vk.com/htmlacademy" target="_blank">
+          <a class="social-link social-link--vk" href="https://vk.com/htmlacademy" target="_blank">
             <span class="visually-hidden">Cat Energy в Вконтакте.</span>
           </a>
         </li>
         <li class="social-item">
-          <a class="social-link" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
+          <a class="social-link social-link--youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
             <span class="visually-hidden">Cat Energy в Ютубе.</span>
           </a>
         </li>
         <li class="social-item">
-          <a class="social-link" href="https://t.me/htmlacademy" target="_blank">
+          <a class="social-link social-link--telegram" href="https://t.me/htmlacademy" target="_blank">
             <span class="visually-hidden">Cat Energy в Телеграме.</span>
           </a>
         </li>
@@ -172,8 +202,8 @@
       <a class="footer__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
         <span class="visually-hidden">Переход на страницу разработчика.</span>
         <span class="footer__link-text">HTML Academy</span>
-        <svg class="footer__icon" width="27" height="36" aria-hidden="true" focusable="false" role="img">
-          <use href=""></use>
+        <svg class="footer__icon" width="27" height="36" aria-hidden="true" focusable="false" role="img" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z" fill="#666666"/>
         </svg>
       </a>
     </div>
