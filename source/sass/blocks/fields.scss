@@ -1,47 +1,231 @@
+.fields {
+  @media (min-width: $vp-768) {
+    padding: 0 36px 0 38px;
+  }
+
+  @media (min-width: $vp-1260) {
+    padding: 0;
+  }
+}
+
 .fields__container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin: 0 0 34px 0;
+
+  @media (min-width: $vp-768) {
+    margin: 0 0 54px 0;
+  }
+
+  @media (min-width: $vp-1260) {
+    margin: 0 0 61px 0;
+  }
 }
 
 .fields__fieldset {
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin: 0;
+  padding: 0;
+
+  border: none;
 
   &--information,
   &--program {
-    margin: 0;
+    margin: 0 0 45px 0;
     padding: 0;
 
     border: none;
 
+    @media (min-width: $vp-768) {
+      margin: 0 0 71px 0;
+    }
+
     @media (min-width: $vp-1260) {
       width: calc(50% - 40px);
+      margin: 0 0 65px 0;
+    }
+  }
+
+  &--program {
+    @media (min-width: $vp-768) {
+      padding: 25px 28px 29px 28px;
+
+      outline: 1px solid $moon-lily;
+    }
+
+    @media (min-width: $vp-1260) {
+      align-self: flex-start;
     }
   }
 
   &--contacts {
+    margin: 0 0 23px 0;
+
+    @media (min-width: $vp-768) {
+      margin: 0 0 65px 0;
+    }
+
     @media (min-width: $vp-1260) {
       display: flex;
-      flex-direction: row;
-      justify-content: space-around;
+      flex-direction: column;
+      margin: 0 0 67px 0;
+    }
+  }
+
+  &--comment {
+    margin: 0 0 22px 0;
+
+    @media (min-width: $vp-768) {
+      margin: 0 0 65px 0;
+    }
+  }
+}
+
+.fields__list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  gap: 13px;
+
+  .fields__fieldset--information & {
+    gap: 14px;
+
+    @media (min-width: $vp-768) {
+      gap: 20px;
+    }
+  }
+
+  .fields__fieldset--contacts & {
+    gap: 14px;
+
+    @media (min-width: $vp-768) {
+      gap: 20px;
+    }
+
+    @media (min-width: $vp-1260) {
+      gap: 7%;
+      grid-template-columns: repeat(2, 46.7%);
+    }
+  }
+
+  .fields__fieldset--additionally & {
+    @media (min-width: $vp-768) {
+      gap: 32px 17%;
+      grid-template-columns: repeat(2, 41.5%);
+    }
+
+    @media (min-width: $vp-1260) {
+      gap: 8%;
+      grid-template-columns: 18% 18% 18% 20%;
     }
   }
 }
 
 .fields__title {
+  position: relative;
+
+  display: flex;
+  align-self: flex-start;
+  max-width: 205px;
+  margin: 0 0 35px 0;
+  padding: 0 22px 0 0;
+
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
   font-family: $font-oswald;
+
+  background-color: $white;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    z-index: -1;
+
+    width: 100vw;
+    height: 2px;
+
+    background-color: $starbur;
+
+    @media (min-width: $vp-768) {
+      top: 26px;
+    }
+  }
+
+  &::before {
+    display: none;
+
+    @media (min-width: $vp-768) {
+      left: -50vw;
+
+      display: block;
+    }
+  }
+
+  &::after {
+    left: 0;
+  }
+
+  @media (min-width: $vp-768) {
+    max-width: 650px;
+    margin: 0 0 76px -40px;
+    padding: 0 40px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  &--margin {
+    @media (min-width: $vp-1260) {
+      margin: 0 0 57px -40px;
+    }
+  }
 }
 
-.fields__label {
-  &--email,
-  &--ltel {
-    @media (min-width: $vp-1260) {
-      width: calc(50% - 40px);
-    }
+.fields__button-container {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $vp-768) {
+    flex-direction: row;
+  }
+}
+
+.fields__button {
+  margin: 0 0 21px 0;
+
+  @media (min-width: $vp-768) {
+    max-width: 300px;
+    margin: 0 64px 0 0;
+  }
+
+  @media (min-width: $vp-1260) {
+    width: calc(50% - 42px);
+    max-width: 100%;
+    margin: 0 84px 0 0;
+  }
+}
+
+.fields__description {
+  margin: 0;
+
+  text-align: center;
+
+  @media (min-width: $vp-768) {
+    margin: 15px 0 0 0;
+
+    text-align: left;
+  }
+
+  @media (min-width: $vp-1260) {
+    margin: 17px 0 0 0;
   }
 }

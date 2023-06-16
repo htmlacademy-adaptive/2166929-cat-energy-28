@@ -14,15 +14,17 @@
 
 .container {
   min-width: 320px;
-  max-width: 1440px;
+  max-width: 1260px;
   margin: 0 auto;
   padding: 0 20px;
+  overflow: hidden;
 
   @media (min-width: $vp-768) {
     padding: 0 30px;
+    overflow: visible;
   }
 
   @media (min-width: $vp-1260) {
-    padding: 0 90px;
+    padding: 0 20px;
   }
 }

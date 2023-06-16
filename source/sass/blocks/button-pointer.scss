@@ -1,6 +1,8 @@
 .button-pointer {
+  position: relative;
+
   display: inline-flex;
-  padding: 4px 0;
+  padding: 4px 47px 4px 0;
 
   font-weight: 400;
   font-size: 16px;
@@ -12,8 +14,37 @@
 
   cursor: pointer;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    right: 8px;
+
+    width: 24px;
+    height: 12px;
+
+    background-color: $black;
+
+    mask-image: url("../img/background/button-pointer-icon.svg");
+    mask-repeat: no-repeat;
+
+    @media (min-width: $vp-768) {
+      top: 14px;
+    }
+
+    @media (min-width: $vp-1260) {
+      right: 11px;
+    }
+  }
+
   @media (min-width: $vp-768) {
+    padding: 4px 54px 4px 0;
+
     font-size: 20px;
     line-height: 30px;
+  }
+
+  @media (min-width: $vp-1260) {
+    padding: 4px 60px 4px 0;
   }
 }

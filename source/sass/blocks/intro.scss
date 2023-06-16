@@ -3,42 +3,6 @@
 
   padding: 0 0 10px 0;
 
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 1;
-
-    display: block;
-    width: 100%;
-    height: calc(100% - 178px);
-
-    @media (min-width: $vp-768) {
-      display: none;
-    }
-
-    @media (min-width: $vp-1260) {
-      top: -60px;
-
-      display: block;
-      width: 50%;
-      height: calc(100% + 60px);
-    }
-  }
-
-  &::before {
-    background-image: url("../img/background/intro-background-mobile.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  &::after {
-    background-color: $starbur;
-    opacity: 85%;
-  }
-
   @media (min-width: $vp-768) {
     padding: 0;
   }
@@ -56,7 +20,7 @@
 
   @media (min-width: $vp-1260) {
     width: calc(100% + 60px);
-    padding: 111px 820px 185px 100px;
+    padding: 57px 750px 185px 80px;
   }
 }
 
@@ -74,18 +38,15 @@
 
   @media (min-width: $vp-1260) {
     position: absolute;
-    top: 90px;
+    top: -20px;
     left: 50%;
 
-    transform: translate(-50%, 0);
+    transform: translate(-29%, 0);
   }
 }
 
 .intro__title,
 .intro__subtitle {
-  position: relative;
-  z-index: 2;
-
   text-align: center;
   color: $white;
 

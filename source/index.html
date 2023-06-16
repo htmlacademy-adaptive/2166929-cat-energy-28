@@ -18,7 +18,7 @@
 </head>
 
 <body class="page__body">
-  <header class="header no-js">
+  <header class="header no-js header--main">
     <div class="header__container container">
       <div class="header__button-logo-container">
         <span class="header__logo header__logo--main">
@@ -106,17 +106,19 @@
     <section class="example">
       <div class="example__container container">
         <div class="example__content-container">
-          <h2 class="example__title block-title">Живой пример</h2>
-          <p class="example__description description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+          <div class="example__text-container">
+            <h2 class="example__title block-title">Живой пример</h2>
+            <p class="example__description description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+          </div>
           <div class="example__result-container">
             <ul class="example__list">
               <li class="example__item">
                 <span class="example__important-number">5 кг</span>
-                <p class="example__important-description">снижение веса</p>
+                <p class="example__important-description">снижение&nbsp;<br>веса</p>
               </li>
               <li class="example__item">
                 <span class="example__important-number">60 дней</span>
-                <p class="example__important-description">затрачено времени</p>
+                <p class="example__important-description">затрачено&nbsp;<br>времени</p>
               </li>
             </ul>
             <div class="example__price">
@@ -126,7 +128,10 @@
           </div>
         </div>
         <div class="example__image-container">
-          <button class="visually-hidden" type="button">Подвинуть влево/вправо для просмотра до и после.</button>
+          <button class="example__button" type="button">
+            <span class="visually-hidden">Подвинуть влево/вправо для просмотра до и после.</span>
+            <span class="example__button-circle"></span>
+          </button>
           <div class="example__image-before-after">
             <div class="example__image-before-container">
               <picture>
