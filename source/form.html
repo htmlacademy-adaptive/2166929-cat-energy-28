@@ -20,14 +20,15 @@
 <body class="page__body">
   <header class="header no-js">
     <div class="header__container container">
-      <div class="header__button-logo-container">
-        <a class="header__logo" href="index.html">
+      <div class="header__button-logo-container header__button-logo-container--padding">
+        <a class="header__logo header__logo--margin" href="index.html">
           <span class="visually-hidden">Переход на главную страницу.</span>
           <picture>
             <source media="(min-width: 1260px)" width="202" height="59" srcset="img/content/logo-desktop.svg">
             <source media="(min-width: 768px)" width="174" height="51" srcset="img/content/logo-tablet.svg">
-            <img class="header__logo-image" src="img/content/logo-mobile.svg" width="190" height="37" alt="Логотип «Cat Energy».">
+            <img src="img/content/logo-mobile.svg" width="33" height="37" alt="Логотип «Cat Energy».">
           </picture>
+          <img class="header__logo-text" src="img/content/logo-text-mobile.svg" width="101" height="18" alt="Название «Cat Energy».">
         </a>
         <button class="header__toggle" type="button">
           <span class="visually-hidden">Открыть/закрыть меню.</span>
@@ -117,13 +118,15 @@
                 <li class="fields__item fields__item--email">
                   <label class="fields__label form-input form-input--email">
                     <span class="form-input__description">E-mail:*</span>
-                    <input class="form-input__input form-input__input" type="email" name="email" placeholder="E-mail" value="kuklachev@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" required>
+                    <input class="form-input__input" type="email" name="email" placeholder="E-mail" value="kuklachev@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" required>
+                    <span class="form__input-sign form__input-sign--email"></span>
                   </label>
                 </li>
-                <li class="fields__item fields__item--tel">
+                <li class="fields__item fields__item--telephone">
                   <label class="fields__label form-input form-input--telephone">
                     <span class="form-input__description">Телефон:*</span>
-                    <input class="form-input__input form-input__input" type="tel" name="telephone" placeholder="Телефон" value="8 (960) 900-60-90" pattern="^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$" required>
+                    <input class="form-input__input" type="tel" name="telephone" placeholder="Телефон" value="8 (960) 900-60-90" pattern="^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$" required>
+                    <span class="form__input-sign form__input-sign--telephone"></span>
                   </label>
                 </li>
               </ul>
@@ -170,7 +173,7 @@
             </fieldset>
           </div>
           <div class="fields__button-container">
-            <button class="fields__button button" type="submit">Отправить заявку</button>
+            <button class="fields__button button button--size" type="submit">Отправить заявку</button>
             <p class="fields__description">* — Обязательные поля</p>
           </div>
         </form>
@@ -182,7 +185,7 @@
       <div class="container">
         <h2 class="visually-hidden">Контакты.</h2>
           <div class="map__content-container">
-            <span class="map__title">Приглашаем к&nbsp;гсотрудничеству дилеров!</span>
+            <span class="map__title">Приглашаем к&nbsp;сотрудничеству дилеров!</span>
             <address class="map__address">
               <p class="map__address-description">ул. Большая Конюшенная, д. 19/8</p>
               <p class="map__address-city">Санкт-Петербург</p>
@@ -195,6 +198,7 @@
           <source media="(min-width: 768px)" width="768" height="400" srcset="img/content/map-tablet.jpg 1x, img/content/map-tablet@2x.jpg 2x">
           <img class="map__img" src="img/content/map-mobile.jpg" width="320" height="362" srcset="img/content/map-mobile@2x.jpg 2x" alt="Карта местоположения магазина «Cat Energy».">
         </picture>
+        <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257197904!2d30.320472476904055!3d59.93871916209403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1687095069613!5m2!1sru!2sru" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </section>
   </main>
@@ -203,7 +207,7 @@
     <div class="footer__container container">
       <a class="footer__logo" href="index.html">
         <span class="visually-hidden">Переход на главную страницу.</span>
-        <svg width="129" height="25" viewBox="0 0 129 25" fill="#111111" xmlns="http://www.w3.org/2000/svg">
+        <svg class="footer__logo-icon" width="129" height="25" viewBox="0 0 129 25" fill="#111111" xmlns="http://www.w3.org/2000/svg">
           <path d="M1.62387 22.0513C0.48969 20.3682 -0.0733255 18.3503 0.0213619 16.3077V7.79487C-0.115985 5.73031 0.411776 3.67661 1.52371 1.94872C2.62543 0.615385 4.32809 0 6.832 0C9.33592 0 10.9384 0.615385 11.94 1.74359C13.0274 3.17255 13.5622 4.96181 13.4423 6.76923V8.82051H8.53466V6.46154C8.5743 5.76385 8.47198 5.06533 8.23419 4.41026C8.10709 4.14583 7.90565 3.9264 7.65576 3.78018C7.40588 3.63395 7.11899 3.56763 6.832 3.58974C6.13091 3.58974 5.63013 3.79487 5.42981 4.30769C5.20324 5.03643 5.10158 5.79984 5.12934 6.5641V17.5385C5.07645 18.2799 5.2146 19.0227 5.52997 19.6923C5.73028 20.2051 6.23106 20.4103 6.93216 20.4103C7.63326 20.4103 8.03388 20.2051 8.23419 19.6923C8.46191 18.9992 8.56375 18.2692 8.53466 17.5385V15.0769H13.4423V17.1282C13.5442 18.9651 13.0124 20.7803 11.94 22.2564C10.9384 23.4872 9.23576 24.1026 6.832 24.1026C4.42825 24 2.62543 23.3846 1.62387 22.0513Z"/>
           <path d="M19.3515 0.307617H25.0604L29.267 23.6922H24.6598L23.8586 18.7692H20.5534L19.7522 23.6922H15.0448L19.3515 0.307617ZM23.4579 15.6922L22.2561 6.56403L21.0542 15.6922H23.4579Z"/>
           <path d="M32.7725 4.20505H29.3672V0.307617H41.2858V4.10249H37.8805V23.6922H32.7725V4.20505Z"/>

@@ -6,6 +6,40 @@
   @media (min-width: $vp-768) {
     padding: 0;
   }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: calc(100% - 188px);
+
+    @media (min-width: $vp-768) {
+      display: none;
+    }
+  }
+
+  &::before {
+    z-index: -2;
+
+    background-image: url("../img/background/intro-background-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/intro-background-mobile@2x.jpg");
+    }
+  }
+
+  &::after {
+    z-index: -1;
+
+    background-color: $starbur;
+    opacity: 85%;
+  }
 }
 
 .intro__container {
@@ -13,14 +47,14 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  padding: 27px 20px 0 20px;
 
   @media (min-width: $vp-768) {
-    padding: 64px 118px 544px 118px;
+    padding: 63px 118px 525px 118px;
   }
 
   @media (min-width: $vp-1260) {
-    width: calc(100% + 60px);
-    padding: 57px 750px 185px 80px;
+    padding: 83px 730px 185px 100px;
   }
 }
 
@@ -38,7 +72,7 @@
 
   @media (min-width: $vp-1260) {
     position: absolute;
-    top: -20px;
+    top: 0;
     left: 50%;
 
     transform: translate(-29%, 0);
@@ -89,6 +123,7 @@
 
 .intro__button {
   width: 100%;
+  margin: -2px 0 0 0;
 
   @media (min-width: $vp-768) {
     position: relative;
@@ -96,5 +131,6 @@
 
     align-self: flex-start;
     width: auto;
+    margin: 0;
   }
 }

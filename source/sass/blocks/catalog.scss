@@ -2,16 +2,24 @@
   padding: 27px 0 35px 0;
 
   @media (min-width: $vp-768) {
-    padding: 64px 0 76px 0;
+    padding: 62px 0 76px 0;
   }
 
   @media (min-width: $vp-1260) {
-    padding: 74px 0 85px 0;
+    padding: 47px 0 85px 0;
   }
 }
 
 .catalog__title {
   margin: 0 0 49px 0;
+
+  @media (min-width: $vp-768) {
+    margin: 0 0 96px 0;
+  }
+
+  @media (min-width: $vp-1260) {
+    margin: 0 0 86px 0;
+  }
 }
 
 .catalog__card-list,
@@ -23,33 +31,80 @@
 }
 
 .catalog__card-list {
-  display: grid;
-  margin: 0 0 50px 0;
+  position: relative;
 
-  gap: 19px;
+  display: grid;
+  margin: 0 0 37px 0;
+
+  gap: 20px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: -20px;
+
+    width: calc(100% + 40px);
+    height: 1px;
+
+    background-color: $mercury;
+
+    @media (min-width: $vp-768) {
+      display: none;
+    }
+  }
+
+  &::before {
+    top: -10px;
+  }
+
+  &::after {
+    bottom: -13px;
+  }
 
   @media (min-width: $vp-768) {
     margin: 0 0 68px 0;
 
-    gap: 60px;
+    gap: 74px 60px;
     grid-template-columns: repeat(2, 1fr);
   }
 
   @media (min-width: $vp-1260) {
     margin: 0 0 76px 0;
 
-    gap: 63px 80px;
+    gap: 65px 80px;
     grid-template-columns: repeat(4, 1fr);
   }
+}
+
+.catalog__card-item {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: -20px;
+
+    width: calc(100% + 40px);
+    height: 1px;
+
+    background-color: $mercury;
+  }
+}
+
+.catalog__cards-banner-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .catalog__cards-banner {
   display: grid;
 
-  gap: 54px;
+  gap: 35px;
 
   @media (min-width: $vp-768) {
-    gap: 97px;
+    gap: 70px;
   }
 
   @media (min-width: $vp-1260) {
@@ -61,8 +116,6 @@
 .catalog__additional-product-list {
   display: grid;
 
-  gap: 32px;
-
   @media (min-width: $vp-1260) {
     grid-column-end: 4;
     grid-column-start: 1;
@@ -70,7 +123,12 @@
 }
 
 .catalog__subtitle {
-  margin: 0 0 49px 0;
+  position: relative;
+
+  display: flex;
+  align-self: flex-start;
+  margin: 0 0 35px 0;
+  padding: 0 22px 0 0;
 
   font-weight: 400;
   font-size: 24px;
@@ -78,9 +136,54 @@
   font-family: $font-oswald;
   color: $black;
 
-  @media (min-width: $vp-1260) {
+  background-color: $white;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    z-index: -2;
+
+    width: 100vw;
+    height: 2px;
+
+    background-color: $starbur;
+
+    @media (min-width: $vp-768) {
+      top: 22px;
+    }
+
+    @media (min-width: $vp-1260) {
+      top: 23px;
+    }
+  }
+
+  &::before {
+    display: none;
+
+    @media (min-width: $vp-768) {
+      left: -50vw;
+
+      display: block;
+    }
+  }
+
+  &::after {
+    left: 0;
+  }
+
+  @media (min-width: $vp-768) {
+    margin: 0 0 81px 1px;
+    padding: 0 36px 0 36px;
+
     font-size: 36px;
     line-height: 36px;
+  }
+
+  @media (min-width: $vp-1260) {
+    margin: 0 0 82px -35px;
+    padding: 0 35px 0 35px;
   }
 }
 

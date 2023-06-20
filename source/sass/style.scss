@@ -6,10 +6,13 @@
 
 // Блоки
 @import "blocks/page.scss";
+@import "blocks/page-header-intro.scss";
+@import "blocks/main-container.scss";
 @import "blocks/page-title.scss";
 @import "blocks/button.scss";
 @import "blocks/block-title.scss";
 @import "blocks/header.scss";
+@import "blocks/social.scss";
 @import "blocks/footer.scss";
 @import "blocks/button-pointer.scss";
 @import "blocks/description.scss";
@@ -18,7 +21,6 @@
 @import "blocks/instruction.scss";
 @import "blocks/example.scss";
 @import "blocks/map.scss";
-@import "blocks/social.scss";
 @import "blocks/form.scss";
 @import "blocks/fields.scss";
 @import "blocks/form-input.scss";

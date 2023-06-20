@@ -30,7 +30,7 @@
   }
 
   &::after {
-    top: 65px;
+    top: 63px;
     left: 50%;
     z-index: 2;
 
@@ -42,8 +42,8 @@
     transform: translate(-50%, 0);
 
     @media (min-width: $vp-768) {
-      top: 50%;
-      left: 88px;
+      top: 48%;
+      left: 89px;
 
       width: 57px;
       height: 62px;
@@ -79,7 +79,7 @@
   }
 
   @media (min-width: $vp-1260) {
-    padding: 184px 20px 42px 20px;
+    padding: 184px 30px 42px 30px;
 
     background-image: url("../img/background/banner-desktop.jpg");
 

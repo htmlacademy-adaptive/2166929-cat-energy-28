@@ -4,34 +4,15 @@
   display: flex;
   width: 100%;
 
-  gap: 12px;
+  gap: 15px;
 
-  &--email::before,
-  &--telephone::before {
-    content: "";
-    position: absolute;
-    top: 13px;
-    right: 15px;
-
-    width: 20px;
-    height: 20px;
-
-    background-color: $black-out;
-
-    mask-repeat: no-repeat;
+  &--email,
+  &--telephone {
+    gap: 11px;
 
     @media (min-width: $vp-768) {
-      top: 16px;
-      right: 18px;
+      gap: 21px;
     }
-  }
-
-  &--email::before {
-    mask-image: url("../img/background/input-icon-email.svg");
-  }
-
-  &--telephone::before {
-    mask-image: url("../img/background/input-icon-telephone.svg");
   }
 }
 
@@ -53,6 +34,7 @@
 .form-input__description {
   flex-shrink: 0;
   max-width: 100px;
+  margin: 12px 0 0 0;
 
   @media (min-width: $vp-768) {
     max-width: 150px;
@@ -68,13 +50,23 @@
   border: none;
   outline: 1px solid $moon-lily;
 
+  @media (min-width: $vp-768) {
+    padding: 11px 20px 10px 19px;
+  }
+
   &--textarea {
     height: 150px;
+    padding: 10px 15px 8px 15px;
 
     resize: none;
 
     @media (min-width: $vp-768) {
       height: 174px;
+      padding: 11px 15px 8px 19px;
+    }
+
+    @media (min-width: $vp-1260) {
+      padding: 9px 15px 8px 19px;
     }
   }
 
@@ -85,6 +77,58 @@
 
   .form-input--email &,
   .form-input--telephone & {
-    padding: 14px 45px 13px 20px;
+    padding: 14px 45px 13px 15px;
+
+    @media (min-width: $vp-768) {
+      padding: 11px 45px 12px 19px;
+    }
+  }
+
+  &:hover {
+    outline: 1px solid $compact-disc-grey;
+  }
+
+  &:focus,
+  &:active {
+    outline: 2px solid $goshawk-grey;
+  }
+
+  &:disabled {
+    color: $squant;
+
+    background-color: $mercury;
+    outline: none;
+
+    pointer-events: none;
+  }
+}
+
+.form__input-sign {
+  position: absolute;
+  top: 13px;
+  right: 15px;
+
+  width: 20px;
+  height: 20px;
+
+  background-color: $black-out;
+
+  mask-repeat: no-repeat;
+
+  &--email {
+    mask-image: url("../img/background/input-icon-email.svg");
+  }
+
+  &--telephone {
+    mask-image: url("../img/background/input-icon-telephone.svg");
+  }
+
+  @media (min-width: $vp-768) {
+    top: 16px;
+    right: 18px;
+  }
+
+  .form-input__input:focus + & {
+    background-color: $starbur;
   }
 }

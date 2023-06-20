@@ -6,20 +6,21 @@
   padding: 11px 0 14px 0;
 
   &::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-
-    display: none;
-    width: 100%;
-    height: calc(100% - 81px);
-
-    background-color: $bleached-silk;
-
     @media (min-width: $vp-768) {
-      display: block;
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+
+      width: 100%;
+      height: calc(100% - 67px);
+
+      background-color: $bleached-silk;
+    }
+
+    @media (min-width: $vp-1260) {
+      height: calc(100% - 79px);
     }
   }
 
@@ -27,19 +28,24 @@
     padding: 0 36px 39px 36px;
   }
 
+  @media (min-width: $vp-1260) {
+    padding: 0 37px 39px 38px;
+  }
+
   &--show-more {
     padding: 70px 0 14px 0;
 
     @media (min-width: $vp-768) {
       align-self: flex-end;
-      height: calc(100% - 81px);
-      padding: 161px 35px 39px 35px;
+      height: calc(100% - 70px);
+      padding: 157px 35px 39px 35px;
 
       outline: 2px solid $bleached-silk;
     }
 
     @media (min-width: $vp-1260) {
-      padding: 161px 35px 39px 33px;
+      height: calc(100% - 82px);
+      padding: 159px 35px 39px 33px;
     }
 
     &::after,
@@ -85,7 +91,7 @@
 
 .card__container {
   display: grid;
-  margin: 0 0 13px 0;
+  margin: 0 0 12px 0;
 
   grid-template-columns: repeat(2, 50%);
 
@@ -121,21 +127,56 @@
 
   @media (min-width: $vp-768) {
     height: 200px;
-    margin: 0 0 34px 0;
+    margin: 0 0 28px 0;
   }
 
   @media (min-width: $vp-1260) {
-    margin: 0 0 46px 0;
+    margin: 0 0 41px 0;
+  }
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:focus {
+    outline: 2px solid $starbur;
+    outline-offset: 4px;
+    opacity: 100%;
+  }
+
+  &:active {
+    outline: none;
+    opacity: 30%;
   }
 }
 
 .card__link-about {
   display: inline-flex;
   justify-content: flex-start;
-  margin: 0 0 18px 0;
+  margin: 0 0 14px 0;
 
   @media (min-width: $vp-768) {
     justify-content: center;
+    margin: 0 0 20px 0;
+  }
+
+  @media (min-width: $vp-1260) {
+    margin: 0 0 25px 0;
+  }
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:focus {
+    outline: 2px solid $starbur;
+    outline-offset: 4px;
+    opacity: 100%;
+  }
+
+  &:active {
+    outline: none;
+    opacity: 30%;
   }
 }
 
@@ -173,8 +214,12 @@
     text-align: center;
 
     @media (min-width: $vp-768) {
-      max-width: auto;
+      max-width: 100%;
       margin: 0 0 23px 0;
+    }
+
+    @media (min-width: $vp-1260) {
+      margin: 0 0 25px 0;
     }
   }
 }
@@ -187,11 +232,7 @@
   list-style: none;
 
   @media (min-width: $vp-768) {
-    gap: 14px;
-  }
-
-  @media (min-width: $vp-1260) {
-    gap: 15px;
+    gap: 7px;
   }
 }
 
@@ -225,6 +266,10 @@
 .card__description {
   .card--show-more & {
     text-align: center;
+
+    @media (min-width: $vp-768) {
+      max-width: 200px;
+    }
   }
 }
 
@@ -234,6 +279,18 @@
   margin: auto 0 0 0;
 }
 
+.card__button-buy {
+  @media (min-width: $vp-768) {
+    width: calc(100% - 3px);
+    margin: auto 0 0 3px;
+  }
+}
+
 .card__button-show-more {
-  padding: 14px 5px;
+  padding: 9px 5px;
+
+  @media (min-width: $vp-768) {
+    width: calc(100% - 6px);
+    margin: auto 0 0 4px;
+  }
 }

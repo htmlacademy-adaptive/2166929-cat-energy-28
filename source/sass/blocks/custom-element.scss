@@ -2,6 +2,8 @@
   position: relative;
 
   display: flex;
+
+  cursor: pointer;
 }
 
 .custom-element__icon {
@@ -20,48 +22,67 @@
   &--radio {
     border-radius: 50%;
   }
-}
 
-.custom-element__input[type="radio"]:checked + .custom-element__icon::after {
-  content: "";
-  position: absolute;
-  top: 9px;
-  left: 9px;
+  .custom-element:hover & {
+    outline: 1px solid $covered-in-platinum;
+  }
 
-  width: 13px;
-  height: 13px;
+  .custom-element:active & {
+    outline: 1px solid $covered-in-platinum;
+    opacity: 30%;
+  }
 
-  background-color: $starbur;
-  border-radius: 50%;
+  .custom-element__input:disabled + & {
+    background-color: $mercury;
+    outline: none;
+    opacity: 100%;
 
-  @media (min-width: $vp-768) {
-    top: 11px;
-    left: 11px;
-
-    width: 18px;
-    height: 18px;
+    pointer-events: none;
   }
 }
 
-.custom-element__input[type="checkbox"]:checked + .custom-element__icon::after {
-  content: "";
-  position: absolute;
-  top: 7px;
-  left: 6px;
+.custom-element__input {
+  &[type="radio"]:checked + .custom-element__icon::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 9px;
 
-  width: 18px;
-  height: 14px;
+    width: 13px;
+    height: 13px;
 
-  background-image: url("../img/background/custom-element-icon.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
+    background-color: $starbur;
+    border-radius: 50%;
 
-  @media (min-width: $vp-768) {
-    top: 11px;
-    left: 8px;
+    @media (min-width: $vp-768) {
+      top: 11px;
+      left: 11px;
 
-    width: 24px;
-    height: 18px;
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &[type="checkbox"]:checked + .custom-element__icon::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 6px;
+
+    width: 18px;
+    height: 14px;
+
+    background-image: url("../img/background/custom-element-icon.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-width: $vp-768) {
+      top: 11px;
+      left: 8px;
+
+      width: 24px;
+      height: 18px;
+    }
   }
 }
 
@@ -80,5 +101,17 @@
 
     font-size: 20px;
     line-height: 30px;
+  }
+
+  .custom-element:active & {
+    opacity: 30%;
+  }
+
+  .custom-element__input:disabled ~ & {
+    color: $covered-in-platinum;
+
+    opacity: 100%;
+
+    pointer-events: none;
   }
 }

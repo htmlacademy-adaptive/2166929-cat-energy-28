@@ -1,78 +1,18 @@
-.header {
-  position: relative;
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: -1;
-
-    display: none;
-    width: 100%;
-    height: 367px;
-
-    @media (min-width: $vp-1260) {
-      left: 50%;
-
-      height: calc(100% + 529px);
-    }
-  }
-
-  &::before {
-    background-image: url("../img/background/intro-background-mobile.jpg");
-    background-repeat: no-repeat;
-    background-position: 0 10px;
-    background-size: cover;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/background/intro-background-mobile@2x.jpg");
-    }
-
-    @media (min-width: $vp-1260) {
-      width: 720px;
-
-      background-image: url("../img/background/intro-background-desktop.jpg");
-      background-position: 0;
-
-      @media (min-resolution: 2dppx) {
-        background-image: url("../img/background/intro-background-desktop@2x.jpg");
-      }
-    }
-  }
-
-  &::after {
-    background: linear-gradient(90deg, $starbur 720px, $chlorophyll 720px);
-    opacity: 85%;
-  }
-
-  @media (min-width: $vp-1260) {
-    z-index: 2;
-  }
-
-  &--main::before,
-  &--main::after {
-    display: block;
-
-    @media (min-width: $vp-768) {
-      display: none;
-    }
-
-    @media (min-width: $vp-1260) {
-      display: block;
-    }
-  }
-}
-
 .header__button-logo-container {
   display: flex;
-  justify-content: space-between;
   padding: 12px 0 16px 0;
 
   @media (min-width: $vp-768) {
     display: block;
     padding: 0;
+  }
+
+  &--padding {
+    padding: 14px 0 16px 0;
+
+    @media (min-width: $vp-768) {
+      padding: 0;
+    }
   }
 }
 
@@ -81,21 +21,25 @@
 
   @media (min-width: $vp-768) {
     display: flex;
-    justify-content: space-between;
-    min-height: auto;
+    padding: 3px 31px 0 31px;
 
     background-color: $transparent;
   }
 
   @media (min-width: $vp-1260) {
-    padding: 54px 0;
+    padding: 54px 20px 28px 20px;
   }
 }
 
 .header__logo {
-  display: block;
-  width: 190px;
+  display: flex;
+  align-items: center;
+  width: calc(50% + 55px);
   height: 37px;
+
+  &--main {
+    pointer-events: none;
+  }
 
   @media (min-width: $vp-768) {
     width: 174px;
@@ -106,6 +50,46 @@
     width: 202px;
     height: 59px;
   }
+
+  &--margin {
+    @media (min-width: $vp-1260) {
+      margin: 2px 0 0 0;
+    }
+  }
+
+  &:hover {
+    opacity: 80%;
+  }
+
+  &:focus {
+    outline: 2px solid $starbur;
+    outline-offset: 4px;
+    opacity: 100%;
+  }
+
+  &:active {
+    outline: none;
+    opacity: 60%;
+  }
+
+  &--main:hover {
+    opacity: 100%;
+  }
+}
+
+.header__logo-text {
+  display: block;
+  margin: 0 0 0 auto;
+
+  transform: translate(-3px, 0);
+
+  .header__button-logo-container--padding & {
+    transform: translate(-5px, 0);
+  }
+
+  @media (min-width: $vp-768) {
+    display: none;
+  }
 }
 
 .header__toggle {
@@ -115,7 +99,7 @@
   flex-direction: column;
   width: 24px;
   height: 18px;
-  margin: auto 0;
+  margin: auto 0 auto auto;
   padding: 0;
 
   background-color: $transparent;
@@ -186,6 +170,9 @@
 
     display: flex;
     justify-content: flex-end;
+    width: auto;
+    max-width: 550px;
+    margin: 0 0 0 auto;
   }
 }
 
@@ -201,22 +188,22 @@
   @media (min-width: $vp-768) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
-    margin: 18px 0 0 0;
+    margin: 15px 0 0 0;
 
     gap: 35px;
   }
 
   @media (min-width: $vp-1260) {
     max-width: 620px;
+    margin: 16px 0 0 0;
 
     background-color: $transparent;
-
-    gap: 34px;
   }
 }
 
 .header__link {
+  position: relative;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -255,20 +242,36 @@
     box-shadow: none;
   }
 
+  @media (min-width: $vp-1260) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   &--current,
   &--current-main {
-    @media (min-width: $vp-768) {
-      text-decoration: underline;
+    pointer-events: none;
 
-      text-decoration-color: $starbur;
-      text-decoration-thickness: 2px;
-      text-underline-offset: 9px;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -7px;
+      left: 0;
+
+      display: none;
+      width: 100%;
+      height: 2px;
+
+      background-color: $starbur;
+
+      @media (min-width: $vp-1260) {
+        display: block;
+      }
     }
   }
 
   &--current-main {
-    @media (min-width: $vp-1260) {
-      text-decoration-color: $white;
+    &::before {
+      background-color: $white;
     }
   }
 
@@ -276,5 +279,24 @@
     @media (min-width: $vp-1260) {
       color: $white;
     }
+  }
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:focus {
+    outline: 2px solid $starbur;
+    outline-offset: 4px;
+    opacity: 100%;
+  }
+
+  &--main:focus {
+    outline: 2px solid $white;
+  }
+
+  &:active {
+    outline: none;
+    opacity: 30%;
   }
 }

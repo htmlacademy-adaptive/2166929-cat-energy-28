@@ -1,17 +1,17 @@
 .form {
-  padding: 27px 0 32px 0;
+  padding: 26px 0 32px 0;
 
   @media (min-width: $vp-768) {
-    padding: 65px 0 72px 0;
+    padding: 62px 0 72px 0;
   }
 
   @media (min-width: $vp-1260) {
-    padding: 20px 0 82px 0;
+    padding: 18px 0 82px 0;
   }
 }
 
 .form__info {
-  margin: 0 0 38px 0;
+  margin: 0 0 40px 0;
 
   @media (min-width: $vp-768) {
     margin: 0 0 66px 0;
@@ -25,6 +25,14 @@
 
 .form__title {
   margin: 0 0 37px 0;
+
+  @media (min-width: $vp-768) {
+    margin: 0 0 54px 0;
+  }
+
+  @media (min-width: $vp-1260) {
+    margin: 0 0 56px 0;
+  }
 }
 
 .form__description {
@@ -40,13 +48,5 @@
   @media (min-width: $vp-768) {
     font-size: 20px;
     line-height: 30px;
-  }
-
-  br {
-    display: none;
-
-    @media (min-width: $vp-768) {
-      display: block;
-    }
   }
 }
