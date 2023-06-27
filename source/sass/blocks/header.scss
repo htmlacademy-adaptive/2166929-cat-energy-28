@@ -1,6 +1,6 @@
 .header__button-logo-container {
   display: flex;
-  padding: 12px 0 16px 0;
+  padding: 12px 0 14px 0;
 
   @media (min-width: $vp-768) {
     display: block;
@@ -34,27 +34,25 @@
 .header__logo {
   display: flex;
   align-items: center;
-  width: calc(50% + 55px);
+  width: 190px;
   height: 37px;
 
   &--main {
+    margin: 2px 0 0 1px;
+
     pointer-events: none;
   }
 
   @media (min-width: $vp-768) {
     width: 174px;
     height: 51px;
+    margin: 0;
   }
 
   @media (min-width: $vp-1260) {
     width: 202px;
     height: 59px;
-  }
-
-  &--margin {
-    @media (min-width: $vp-1260) {
-      margin: 2px 0 0 0;
-    }
+    margin: 2px 0 0 0;
   }
 
   &:hover {
@@ -115,6 +113,15 @@
   @media (min-width: $vp-768) {
     display: none;
   }
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:active {
+    outline: none;
+    opacity: 30%;
+  }
 }
 
 .header__toggle-line {
@@ -171,8 +178,12 @@
     display: flex;
     justify-content: flex-end;
     width: auto;
-    max-width: 550px;
+    max-width: 450px;
     margin: 0 0 0 auto;
+  }
+
+  @media (min-width: $vp-1260) {
+    max-width: 550px;
   }
 }
 
@@ -190,7 +201,13 @@
     flex-wrap: wrap;
     margin: 15px 0 0 0;
 
-    gap: 35px;
+    gap: 35.5px;
+  }
+
+  &--margin {
+    @media (min-width: $vp-768) {
+      gap: 33px;
+    }
   }
 
   @media (min-width: $vp-1260) {
@@ -198,30 +215,21 @@
     margin: 16px 0 0 0;
 
     background-color: $transparent;
+
+    gap: 35px;
   }
 }
 
-.header__link {
-  position: relative;
-
+.header__item {
   display: flex;
   justify-content: center;
   align-items: center;
   width: calc(100% + 40px);
-  margin: 0 0 0 -20px;
-  padding: 22px 22px 24px 22px;
-
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 20px;
-  font-family: $font-oswald;
-  color: $black;
-  text-transform: uppercase;
-  text-decoration: none;
+  padding: 0 40px 0 40px;
 
   box-shadow: 0 1px 0 $moon-lily-light inset;
 
-  .header__item:last-child & {
+  &:last-child {
     box-shadow: 0 1px 0 $moon-lily-light inset,
       0 -1px 0 $moon-lily-light inset;
 
@@ -231,18 +239,45 @@
   }
 
   @media (min-width: $vp-768) {
+    align-self: flex-start;
     width: auto;
+    padding: 0;
+
+    box-shadow: none;
+  }
+}
+
+.header__link {
+  position: relative;
+
+  display: block;
+  margin: 0 0 0 -20px;
+  padding: 22px 22px 24px 22px;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  font-family: $font-oswald;
+  text-align: center;
+  color: $black;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  @media (min-width: $vp-768) {
+    width: auto;
+    max-width: 160px;
     margin: 0;
     padding: 0;
 
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
-
-    box-shadow: none;
+    text-align: left;
   }
 
   @media (min-width: $vp-1260) {
+    max-width: 200px;
+
     font-size: 20px;
     line-height: 30px;
   }
@@ -263,7 +298,15 @@
 
       background-color: $starbur;
 
+      @media (min-width: $vp-768) {
+        bottom: -9.5px;
+
+        display: block;
+      }
+
       @media (min-width: $vp-1260) {
+        bottom: -7px;
+
         display: block;
       }
     }
@@ -271,7 +314,9 @@
 
   &--current-main {
     &::before {
-      background-color: $white;
+      @media (min-width: $vp-1260) {
+        background-color: $white;
+      }
     }
   }
 
@@ -287,12 +332,18 @@
 
   &:focus {
     outline: 2px solid $starbur;
-    outline-offset: 4px;
+    outline-offset: -10px;
     opacity: 100%;
+
+    @media (min-width: $vp-768) {
+      outline-offset: 4px;
+    }
   }
 
   &--main:focus {
-    outline: 2px solid $white;
+    @media (min-width: $vp-1260) {
+      outline: 2px solid $white;
+    }
   }
 
   &:active {

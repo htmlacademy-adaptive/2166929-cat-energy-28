@@ -1,16 +1,16 @@
 .footer {
   width: 100%;
   margin: auto 0 0 0;
-  padding: 40px 0;
+  padding: 36px 0;
 
   background-color: $bleached-silk;
 
   @media (min-width: $vp-768) {
-    padding: 56px 0;
+    padding: 54px 0;
   }
 
   @media (min-width: $vp-1260) {
-    padding: 68px 0 66px 0;
+    padding: 67px 0 66px 0;
   }
 }
 
@@ -18,7 +18,7 @@
   display: flex;
   flex-direction: column;
 
-  gap: 34px;
+  gap: 40px;
 
   @media (min-width: $vp-768) {
     display: grid;
@@ -31,7 +31,7 @@
 .footer__social {
   position: relative;
 
-  margin: 0 0 13px 0;
+  margin: 0 0 7px 0;
 
   &::before,
   &::after {
@@ -66,10 +66,20 @@
 .footer__logo {
   display: block;
   align-self: center;
+  width: 131px;
+  height: 25px;
+  margin: 4px 0 0 0;
 
   @media (min-width: $vp-768) {
     align-self: flex-start;
-    width: max-content;
+    width: 145px;
+    height: 29px;
+    margin: 4px 0 0 0;
+  }
+
+  &:focus {
+    outline: 2px solid $starbur;
+    outline-offset: 2px;
   }
 }
 
@@ -77,6 +87,7 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  margin: 0 0 13px 0;
 
   text-decoration: none;
 
@@ -84,6 +95,21 @@
     align-self: flex-start;
     width: max-content;
     margin: 0 0 0 auto;
+  }
+
+  &:focus {
+    outline: 2px solid $starbur;
+    outline-offset: 11px;
+    opacity: 100%;
+
+    @media (min-width: $vp-768) {
+      outline-offset: 2px;
+    }
+  }
+
+  &:active {
+    outline: none;
+    opacity: 30%;
   }
 }
 
@@ -104,14 +130,47 @@
 .footer__icon {
   margin: -10px 0 0 0;
 
+  fill: $squant;
+
   @media (min-width: $vp-768) {
     margin: 0;
+  }
+
+  .footer__link:hover & {
+    fill: $starbur;
+  }
+
+  .footer__link:focus & {
+    fill: $starbur;
+  }
+
+  .footer__link:active & {
+    fill: $starbur;
   }
 }
 
 .footer__logo-icon {
+  width: 131px;
+  height: 25px;
+
+  fill: $dreamless-sleep;
+
   @media (min-width: $vp-768) {
     width: 145px;
-    height: 39px;
+    height: 29px;
+  }
+
+  .footer__logo:hover & {
+    fill: $baltic-sea;
+  }
+
+  .footer__logo:focus & {
+    fill: $dreamless-sleep;
+  }
+
+  .footer__logo:active & {
+    outline: none;
+
+    fill: $boat-anchor;
   }
 }

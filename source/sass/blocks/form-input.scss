@@ -45,7 +45,7 @@
 .form-input__input {
   align-self: flex-start;
   width: 100%;
-  padding: 14px 20px 13px 20px;
+  padding: 14px 20px 12px 20px;
 
   border: none;
   outline: 1px solid $moon-lily;
@@ -54,9 +54,15 @@
     padding: 11px 20px 10px 19px;
   }
 
+  &::placeholder {
+    color: $goshawk-grey;
+
+    opacity: 100%;
+  }
+
   &--textarea {
     height: 150px;
-    padding: 10px 15px 8px 15px;
+    padding: 7px 15px 8px 15px;
 
     resize: none;
 
@@ -70,9 +76,20 @@
     }
   }
 
-  &::-webkit-outer-spin-button,
-  &::-webkit-inner-spin-button {
+  &[type="number"]::-webkit-inner-spin-button,
+  &[type="number"]::-webkit-outer-spin-button {
+    margin: 0;
+
     appearance: none;
+  }
+
+  &[type="number"] {
+    appearance: textfield;
+  }
+
+  &[type="number"]:hover,
+  &[type="number"]:focus {
+    appearance: number-input;
   }
 
   .form-input--email &,
@@ -101,6 +118,10 @@
 
     pointer-events: none;
   }
+
+  &.error {
+    outline: 2px solid $shell-pink;
+  }
 }
 
 .form__input-sign {
@@ -116,11 +137,11 @@
   mask-repeat: no-repeat;
 
   &--email {
-    mask-image: url("../img/background/input-icon-email.svg");
+    mask-image: url("../img/svg/input-icon-email.svg");
   }
 
   &--telephone {
-    mask-image: url("../img/background/input-icon-telephone.svg");
+    mask-image: url("../img/svg/input-icon-telephone.svg");
   }
 
   @media (min-width: $vp-768) {
@@ -130,5 +151,9 @@
 
   .form-input__input:focus + & {
     background-color: $starbur;
+  }
+
+  .form-input__input.error + & {
+    background-color: $shell-pink;
   }
 }

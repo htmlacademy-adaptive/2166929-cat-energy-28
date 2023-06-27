@@ -37,54 +37,19 @@
 
     @media (min-width: $vp-768) {
       align-self: flex-end;
-      height: calc(100% - 70px);
-      padding: 157px 35px 39px 35px;
-
-      outline: 2px solid $bleached-silk;
+      height: 100%;
+      padding: 227px 35px 39px 35px;
     }
 
     @media (min-width: $vp-1260) {
-      height: calc(100% - 82px);
-      padding: 159px 35px 39px 33px;
+      padding: 238px 35px 39px 33px;
     }
+  }
 
-    &::after,
-    &::before {
-      content: "";
-      position: absolute;
-      left: 50%;
-
-      background-color: $pinball;
-      transform: translate(-50%, 0);
-    }
-
-    &::after {
-      top: 17px;
-
-      width: 2px;
-      height: 30px;
-
-      @media (min-width: $vp-768) {
-        top: 52px;
-
-        width: 2px;
-        height: 60px;
-      }
-    }
-
-    &::before {
-      top: 31px;
-
-      display: block;
-      width: 30px;
-      height: 2px;
-
-      @media (min-width: $vp-768) {
-        top: 81px;
-
-        width: 60px;
-        height: 2px;
-      }
+  &--show-more::before {
+    @media (min-width: $vp-768) {
+      background-color: $white;
+      outline: 2px solid $bleached-silk;
     }
   }
 }
@@ -102,10 +67,55 @@
   }
 
   .card--show-more & {
+    position: relative;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0 0 21px 0;
+  }
+
+  .card--show-more &::after,
+  .card--show-more &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+
+    background-color: $pinball;
+    transform: translate(-50%, 0);
+  }
+
+  .card--show-more &::after {
+    top: -54px;
+
+    width: 2px;
+    height: 30px;
+
+    @media (min-width: $vp-768) {
+      top: -108px;
+
+      width: 2px;
+      height: 60px;
+    }
+  }
+
+  .card--show-more &::before {
+    top: -40px;
+
+    display: block;
+    width: 30px;
+    height: 2px;
+
+    @media (min-width: $vp-768) {
+      top: -77px;
+
+      width: 60px;
+      height: 2px;
+    }
+
+    @media (min-width: $vp-1260) {
+      top: -78px;
+    }
   }
 }
 
@@ -123,15 +133,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: fit-content;
   height: 112px;
+  margin: 0 auto;
 
   @media (min-width: $vp-768) {
     height: 200px;
-    margin: 0 0 28px 0;
+    margin: 0 auto 28px auto;
   }
 
   @media (min-width: $vp-1260) {
-    margin: 0 0 41px 0;
+    margin: 0 auto 41px auto;
   }
 
   &:hover {
@@ -140,8 +152,12 @@
 
   &:focus {
     outline: 2px solid $starbur;
-    outline-offset: 4px;
+    outline-offset: -8px;
     opacity: 100%;
+
+    @media (min-width: $vp-768) {
+      outline-offset: 4px;
+    }
   }
 
   &:active {
@@ -153,11 +169,12 @@
 .card__link-about {
   display: inline-flex;
   justify-content: flex-start;
+  width: fit-content;
   margin: 0 0 14px 0;
 
   @media (min-width: $vp-768) {
     justify-content: center;
-    margin: 0 0 20px 0;
+    margin: 0 auto 20px auto;
   }
 
   @media (min-width: $vp-1260) {
@@ -214,7 +231,7 @@
     text-align: center;
 
     @media (min-width: $vp-768) {
-      max-width: 100%;
+      max-width: 150px;
       margin: 0 0 23px 0;
     }
 
@@ -261,6 +278,23 @@
     font-size: 16px;
     line-height: 16px;
   }
+}
+
+.card__about-name,
+.card__about-index {
+  max-width: 70px;
+
+  @media (min-width: $vp-768) {
+    max-width: 100px;
+  }
+
+  @media (min-width: $vp-1260) {
+    max-width: 85px;
+  }
+}
+
+.card__about-index {
+  text-align: right;
 }
 
 .card__description {

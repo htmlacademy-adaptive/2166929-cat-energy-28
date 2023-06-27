@@ -24,6 +24,8 @@
 }
 
 .fields__fieldset {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -34,7 +36,7 @@
 
   &--information,
   &--program {
-    margin: 0 0 46px 0;
+    margin: 0 0 47px 0;
     padding: 0;
 
     border: none;
@@ -49,6 +51,27 @@
     }
   }
 
+  &--information::before,
+  &--program::before {
+    content: "";
+    position: absolute;
+    bottom: -24px;
+    left: -20px;
+
+    width: calc(100% + 40px);
+    height: 1px;
+
+    background-color: $covered-in-platinum-dark;
+
+    @media (min-width: $vp-768) {
+      display: none;
+    }
+  }
+
+  &--program::before {
+    bottom: -20px;
+  }
+
   &--program {
     @media (min-width: $vp-768) {
       margin: 0 0 75px 0;
@@ -59,7 +82,7 @@
 
     @media (min-width: $vp-1260) {
       align-self: flex-start;
-      margin: 0 0 71px 0;
+      margin: 0 0 70px 0;
     }
   }
 
@@ -81,7 +104,7 @@
     margin: 0 0 22px 0;
 
     @media (min-width: $vp-768) {
-      margin: 0 0 65px 0;
+      margin: 0 0 67px 0;
     }
   }
 }
@@ -99,8 +122,12 @@
     gap: 12px;
   }
 
+  @media (min-width: $vp-1260) {
+    gap: 13px;
+  }
+
   .fields__fieldset--information & {
-    gap: 14px;
+    gap: 15px;
 
     @media (min-width: $vp-768) {
       gap: 21px;
@@ -130,6 +157,13 @@
       gap: 20px 8.6%;
       grid-template-columns: 18% 18% 18% 20%;
     }
+  }
+}
+
+.fields__item {
+  .fields__fieldset--additionally &,
+  .fields__fieldset--program & {
+    width: fit-content;
   }
 }
 
