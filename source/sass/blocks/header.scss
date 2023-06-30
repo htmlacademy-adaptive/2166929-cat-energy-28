@@ -224,7 +224,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: calc(100% + 40px);
+  width: calc(100% + 80px);
+  margin: 0 0 0 -40px;
   padding: 0 40px 0 40px;
 
   box-shadow: 0 1px 0 $moon-lily-light inset;
@@ -241,6 +242,7 @@
   @media (min-width: $vp-768) {
     align-self: flex-start;
     width: auto;
+    margin: 0;
     padding: 0;
 
     box-shadow: none;

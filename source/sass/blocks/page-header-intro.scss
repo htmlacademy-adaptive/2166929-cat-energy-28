@@ -40,4 +40,8 @@
     background: linear-gradient(90deg, $starbur 1043px, $chlorophyll 1043px);
     opacity: 85%;
   }
+
+  @media (min-width: $vp-1260) {
+    min-height: 692px;
+  }
 }
