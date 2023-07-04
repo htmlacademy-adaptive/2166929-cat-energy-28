@@ -1,0 +1,136 @@
+.intro {
+  position: relative;
+
+  padding: 0 0 10px 0;
+
+  @media (min-width: $vp-768) {
+    padding: 0;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: calc(100% - 193px);
+
+    @media (min-width: $vp-768) {
+      display: none;
+    }
+  }
+
+  &::before {
+    z-index: -2;
+
+    background-image: url("../img/background/intro-background-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/intro-background-mobile@2x.jpg");
+    }
+  }
+
+  &::after {
+    z-index: -1;
+
+    background-color: $starbur;
+    opacity: 85%;
+  }
+}
+
+.intro__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 27px 20px 0 20px;
+
+  @media (min-width: $vp-768) {
+    padding: 63px 118px 525px 118px;
+  }
+
+  @media (min-width: $vp-1260) {
+    padding: 81px 730px 81px 100px;
+  }
+}
+
+.intro__image {
+  position: relative;
+  z-index: 2;
+
+  @media (min-width: $vp-768) {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+    transform: translate(-50%, 0);
+  }
+
+  @media (min-width: $vp-1260) {
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    transform: translate(-29%, 0);
+  }
+}
+
+.intro__title,
+.intro__subtitle {
+  text-align: center;
+  color: $white;
+
+  @media (min-width: $vp-768) {
+    align-self: flex-start;
+
+    text-align: start;
+    color: $black;
+  }
+}
+
+.intro__title {
+  margin: 0 0 25px 3px;
+
+  @media (min-width: $vp-768) {
+    margin: 0 0 40px 0;
+  }
+}
+
+.intro__subtitle {
+  margin: 0 0 29px 0;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  font-family: $font-oswald;
+  text-transform: uppercase;
+
+  @media (min-width: $vp-768) {
+    margin: 0 0 48px 0;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $vp-1260) {
+    margin: 0 0 52px 0;
+  }
+}
+
+.intro__button {
+  width: 100%;
+  margin: -2px 0 6px 0;
+
+  @media (min-width: $vp-768) {
+    position: relative;
+    z-index: 2;
+
+    align-self: flex-start;
+    width: auto;
+    margin: 0 0 0 2px;
+  }
+}

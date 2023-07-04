@@ -1,0 +1,138 @@
+.additional-product {
+  padding: 13px 0 18px 0;
+
+  border: 1px solid $compact-disc-grey;
+  border-right: none;
+  border-left: none;
+
+  &:not(:first-child) {
+    border-top: none;
+  }
+
+  @media (min-width: $vp-768) {
+    padding: 25px 38px 27.5px 38px;
+
+    border-right: 1px solid $compact-disc-grey;
+    border-left: 1px solid $compact-disc-grey;
+  }
+
+  @media (min-width: $vp-1260) {
+    display: grid;
+    padding: 14px 0 17px 0;
+
+    border-right: none;
+    border-left: none;
+
+    gap: 2.85%;
+    grid-template-columns: 70% 27%;
+  }
+}
+
+.additional-product__container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 15px 0;
+
+  @media (min-width: $vp-768) {
+    display: grid;
+    margin: 0 0 21px 0;
+
+    gap: 5%;
+    grid-template-columns: 52% 43%;
+  }
+
+  @media (min-width: $vp-1260) {
+    margin: 0;
+
+    gap: 7%;
+    grid-template-columns: 45% 48%;
+  }
+}
+
+.additional-product__title {
+  margin: 0 0 13px 0;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  font-family: $font-oswald;
+  color: $black-out;
+  text-transform: uppercase;
+
+  @media (min-width: $vp-768) {
+    margin: 0;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $vp-1260) {
+    margin: 10px 0 0 0;
+  }
+}
+
+.additional-product__price-container {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $vp-768) {
+    display: grid;
+    margin: 4px 0 0 0;
+
+    gap: 11%;
+    grid-template-columns: 66% 23%;
+  }
+
+  @media (min-width: $vp-1260) {
+    gap: 14.4%;
+    grid-template-columns: 66% 20%;
+  }
+}
+
+.additional-product__description,
+.additional-product__price {
+  max-width: 120px;
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 14px;
+  font-family: $font-lato;
+  color: $goshawk-grey;
+
+  @media (min-width: $vp-768) {
+    max-width: 135px;
+    margin: 0 0 0 auto;
+
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $vp-1260) {
+    max-width: 150px;
+    margin: 9px auto 0 0;
+  }
+}
+
+.additional-product__description {
+  @media (min-width: $vp-768) {
+    text-align: right;
+  }
+
+  @media (min-width: $vp-1260) {
+    text-align: left;
+  }
+}
+
+.additional-product__price {
+  text-align: right;
+
+  @media (min-width: $vp-1260) {
+    text-align: left;
+  }
+}
+
+.additional-product__button {
+  @media (min-width: $vp-1260) {
+    align-self: flex-start;
+  }
+}

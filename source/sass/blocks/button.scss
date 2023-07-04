@@ -1,0 +1,98 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: $font-oswald;
+  color: $white;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: $starbur;
+  border: none;
+  cursor: pointer;
+
+  &--background-color {
+    color: $goshawk-grey;
+
+    background-color: $bleached-silk;
+  }
+
+  @media (min-width: $vp-768) {
+    padding: 18px 29px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $vp-1260) {
+    padding: 16px 27px;
+  }
+
+  &--size {
+    font-size: 16px;
+    line-height: 20px;
+
+    @media (min-width: $vp-768) {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
+  &--card {
+    @media (min-width: $vp-768) {
+      padding: 10px;
+
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &:hover {
+    background-color: $grass;
+  }
+
+  &:focus {
+    background-color: $starbur;
+    outline: 2px solid $starbur;
+    outline-offset: 4px;
+  }
+
+  &:active {
+    color: $pistachio;
+
+    background-color: $grass;
+    outline: none;
+  }
+
+  &:disabled {
+    color: $moon-lily-light;
+
+    background-color: $pinball;
+
+    pointer-events: none;
+  }
+
+  &--background-color:hover {
+    background-color: $mercury;
+  }
+
+  &--background-color:focus {
+    color: $goshawk-grey;
+
+    background-color: $bleached-silk;
+    outline: 2px solid $starbur;
+    outline-offset: 4px;
+  }
+
+  &--background-color:active {
+    color: $covered-in-platinum-dark;
+
+    background-color: $mercury;
+    outline: none;
+  }
+}

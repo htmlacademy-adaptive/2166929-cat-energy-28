@@ -1,0 +1,47 @@
+.page-header-intro {
+  position: relative;
+
+  overflow: hidden;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    display: none;
+    height: 100%;
+
+    @media (min-width: $vp-1260) {
+      display: block;
+    }
+  }
+
+  &::before {
+    z-index: -2;
+
+    width: 1043px;
+
+    background-image: url("../img/background/intro-background-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/intro-background-desktop@2x.jpg");
+    }
+  }
+
+  &::after {
+    z-index: -1;
+
+    width: 50%;
+
+    background: linear-gradient(90deg, $starbur 1043px, $chlorophyll 1043px);
+    opacity: 85%;
+  }
+
+  @media (min-width: $vp-1260) {
+    min-height: 692px;
+  }
+}
