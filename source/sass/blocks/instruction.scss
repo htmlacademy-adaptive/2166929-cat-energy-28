@@ -208,7 +208,7 @@
 .instruction__description {
   padding: 0 0 0 81px;
 
-  .instruction__item--watch & {
+  &--watch {
     br {
       display: none;
 
