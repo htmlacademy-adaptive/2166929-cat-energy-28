@@ -60,13 +60,11 @@
   }
 
   &:focus {
-    outline: 2px solid $starbur;
-    outline-offset: 4px;
-    opacity: 100%;
+    outline: none;
+    opacity: 80%;
   }
 
   &:active {
-    outline: none;
     opacity: 60%;
   }
 
